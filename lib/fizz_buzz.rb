@@ -18,3 +18,10 @@ puts fizz_buzz(5)
 puts fizz_buzz(6)
 puts fizz_buzz(7)
 puts fizz_buzz(15)
+
+puts "------"
+a = "Hello"
+b = "Hello"
+a = b
+a.upcase!
+puts a,b
