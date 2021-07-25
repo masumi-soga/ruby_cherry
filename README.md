@@ -23,3 +23,15 @@ b #=> HELLO
 ```
 上記のようにa=bなどとするとオブジェクトの変更が影響する
 
+eachをmapに置き換え. 
+```
+numbers = [1,2,3,4,5]
+new_numbers = []
+numbers.each {|n| new_numbers << n * 10}
+new_numbers #=> [10,20,30,40,50]
+↓
+numbers = [1,2,3,4,5]
+new_numbers = numbers.map {|n| n * 10}
+new_numbers #=> [10,20,30,40,50]
+```
+mapメソッドはブロックの戻り値が配列の要素となる新しい配列が作成されるためmapメソッドの戻り値をそのまま使える
