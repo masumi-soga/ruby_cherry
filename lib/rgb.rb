@@ -36,6 +36,6 @@ def to_ints(hex)
   # [r,g,b].map do |s|
   #   s.hex
   # end
-  # 正規表現を使ったリファクタリング
+  # 正規表現・シンボルを使ったリファクタリング
   hex.scan(/\w\w/).map(&:hex)
 end
