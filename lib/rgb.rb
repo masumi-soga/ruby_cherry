@@ -1,5 +1,5 @@
 def to_hex(r, g, b)
-  # DRY原則未使用
+  # DRY原則未適用
   # "#" +
   # r.to_s(16).rjust(2, "0")
   # g.to_s(16).rjust(2, "0")
