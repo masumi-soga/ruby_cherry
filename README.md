@@ -54,4 +54,14 @@ next はループから抜けずに次の繰り返しに飛ぶ
 正規表現  
 /\d{4}/  
 上記の様に//で囲む
-\d{4}:4桁の数字
+\d{4}:4桁の数字  
+
+Rubyでは定数を変更することができる
+INT = ["one", "two", "three"]  
+INT.delete("one")  
+INT #=> ["two", "three"]  
+これを防ぐためにfreezeを行う　　
+INT = ["one", "two", "three"].freeze  
+これだけでは中身を指定しての変更は行えるため各要素もfreezeすると変更を防げる(mapを使うと楽)  
+INT = ["one", "two", "three"].map(:&freeze).freeze  
+boolean型やシンボル、数値はイミュータブルなのでfreezeの必要はない
